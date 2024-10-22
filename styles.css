@@ -1,0 +1,123 @@
+*{
+    margin: 0;padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    /* height: 200vh; */
+    margin: 1rem auto;
+}
+.page-container{
+    display: flex;
+    gap: 4px;
+}
+.btn{
+    min-width: 40px;
+    width: 40px;
+    min-height: 40px;
+    height: 40px;
+    aspect-ratio: 1;
+
+    font-size: large;
+    border: 2px solid #aeaeae;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.active{
+    background-color: #3f96fd;
+    color: white;
+}
+
+.contents{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    margin: 1rem;
+}
+.truncated{
+    border: none;
+    background-color: transparent;
+    position: relative;
+    cursor: default;
+    pointer-events: none;
+    z-index: 2;
+}
+.truncated::after{
+    box-sizing: border-box;
+    content: "...";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    font-size: large;
+    font-weight: 600;
+    aspect-ratio: 1;
+    border-radius: 5px;
+    border: 2px solid #aeaeae;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    margin: 1rem;
+    width: 30vw;
+    font-size: large;
+    border: 2px solid #aeaeae;
+    aspect-ratio: 1;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.card img{
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .card{
+        width: 50vw;
+    }
+} 
+@media (max-width: 600px) {
+    .card{
+        width: 60vw;
+    }
+} 
+@media (max-width: 400px) {
+    .card{
+        width: 70vw;
+    }
+    .btn{
+        min-width: 30px;
+        width: 30px;
+        min-height: 30px;
+        height: 30px;
+    }
+    .truncated::after{
+        width: 30px;
+        height: 30px;
+    }
+} 
