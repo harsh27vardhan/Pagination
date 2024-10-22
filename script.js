@@ -62,6 +62,14 @@ function showgreaterPages(){
 
 function showPages(){
     pageContainer.innerHTML = "";
+    prev.style.backgroundColor = "white"
+    next.style.backgroundColor = "white";
+    if(page==1){
+        prev.style.backgroundColor = "rgb(167, 167, 167)";
+    }
+    else if(page==totalPageCount){
+        next.style.backgroundColor = "rgb(167, 167, 167)";
+    }
     if(pages.length > 7){
         showgreaterPages();
     }
